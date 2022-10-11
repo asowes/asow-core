@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { program } = require("commander");
-const packageInfo = require("@asow/rollup-demo/package.json");
+const packageInfo = require("@asow/core/package.json");
 const AsowPackage = require("./asowPackage");
 
 program

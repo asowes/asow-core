@@ -1,4 +1,4 @@
-const packageInfo = require("@asow/rollup-demo/package.json");
+const packageInfo = require("@asow/core/package.json");
 const { name, version } = packageInfo;
 const { execSync } = require("child_process");
 
@@ -26,9 +26,9 @@ class AsowPackage {
   checkVersion() {
     console.log(version);
     if (this.newest) {
-      const npmPkgInfos = runCommand(`npm view ${name} --json`);
-      const { versions } = JSON.parse(npmPkgInfos);
-      console.log("最新的版本为：", versions[versions.length - 1]);
+      const versions = runCommand(`npm view ${name} versions --json`);
+      const versionsObj = JSON.parse(String(versions)) || [];
+      console.log("最新的版本为：", versionsObj[versionsObj.length - 1]);
     }
   }
 

@@ -4,7 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Provider as ReduxProvider } from "react-redux";
 import { combineReducers } from "@reduxjs/toolkit";
 
-import { reducers, store } from "@asow/rollup-demo/redux";
+import { reducers, store } from "@asow/core/redux";
 // import { theme } from "../ui";
 
 interface AppProps {

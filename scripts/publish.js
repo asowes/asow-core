@@ -25,9 +25,9 @@ const writeJson = (targetPath, obj) =>
   writeFile(targetPath, JSON.stringify(obj, null, 2), "utf8");
 
 (async () => {
-  const npmPkgInfos = await runCommand(`npm view ${name} --json`);
-  const { versions } = JSON.parse(npmPkgInfos);
-  packageInfo.version = versions[versions.length - 1];
+  const versions = await runCommand(`npm view ${name} versions --json`);
+  const versionsObj = JSON.parse(String(versions)) || [];
+  packageInfo.version = versionsObj[versionsObj.length - 1];
 
   const targetPath = path.resolve(__dirname, `../dist/package.json`);
   const newPackageData = {
