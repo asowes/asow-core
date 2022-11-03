@@ -24,10 +24,10 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
-"@asow/core@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@asow/core/-/core-0.1.3.tgz#7b74e2142097c7398e823f353a90bfd9d98b911e"
-  integrity sha512-KZriqsXbXpaO7s8WfcwCaqGeLMM9iQoq3SfG3PZ916/+Fy43z6fGkLtPQGSa65kZUiQVG60o/Mf69pG8dowz/g==
+"@asow/core@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@asow/core/-/core-0.1.6.tgz#6aea7e0ed353cfed95518d481d198d5906c97eb8"
+  integrity sha512-OJnwi8SbH5iMC3ZFhaE6Gv2/7BlQ1s1DZ7poWjepDGq/Mjdwfw4qsvtkaSLKNKn1Pq4qA3njU9IKldvS9Bjz+w==
   dependencies:
     "@chakra-ui/react" "^2.3.4"
     "@emotion/css" "^11.10.0"

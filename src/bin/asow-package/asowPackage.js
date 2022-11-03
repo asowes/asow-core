@@ -37,8 +37,8 @@ class AsowPackage {
       execSync(`yarn add ${name}`, { stdio: "inherit" });
     }
     if (this.all) {
-      console.log("yarn add xxx 1 ...");
-      console.log("yarn add xxx 2 ...");
+      execSync(`yarn add ${name}`, { stdio: "inherit" });
+      execSync(`yarn add @asow/ui`, { stdio: "inherit" });
       console.log("yarn add xxx 3 ...");
     }
   }

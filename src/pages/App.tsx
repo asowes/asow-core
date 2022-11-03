@@ -1,11 +1,8 @@
 import React from "react";
-import { ChakraProvider } from "@chakra-ui/react";
-// import { extendTheme } from "@chakra-ui/react";
 import { Provider as ReduxProvider } from "react-redux";
 import { combineReducers } from "@reduxjs/toolkit";
 
 import { reducers, store } from "@asow/core/redux";
-// import { theme } from "../ui";
 
 interface AppProps {
   Component: any;
@@ -25,13 +22,9 @@ const App = (props: AppProps) => {
 
   return (
     <React.Fragment>
-      <ChakraProvider
-      // theme={_theme}
-      >
-        <ReduxProvider store={store}>
-          <Component />
-        </ReduxProvider>
-      </ChakraProvider>
+      <ReduxProvider store={store}>
+        <Component />
+      </ReduxProvider>
     </React.Fragment>
   );
 };
