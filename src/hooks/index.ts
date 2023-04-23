@@ -1,2 +1,4 @@
 import { useDidUpdateEffect } from "./useDidUpdateEffect";
-export { useDidUpdateEffect };
+import { useLocalStorage } from "./useLocalStorage";
+
+export { useDidUpdateEffect, useLocalStorage };
