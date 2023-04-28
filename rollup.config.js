@@ -21,7 +21,10 @@ const external = externalPackages.map(
 
 const plugins = [
   peerDepsExternal(),
-  resolve(),
+  resolve({
+    preferBuiltins: true,
+    mainFields: ["browser", "jsnext", "module", "main"],
+  }),
   json(),
   babel({
     exclude: "**/node_modules/**",

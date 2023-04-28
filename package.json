@@ -50,6 +50,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -67,6 +68,7 @@
     "build": "yarn rollup && yarn post:build && yarn build:bin",
     "post:build": "node ./scripts/frankBuild.js",
     "build:bin": "node ./scripts/copyBin.js",
+    "build:pub": "yarn build && yarn pub",
     "rollup": "rm -rf dist && rollup -c",
     "pub": "node ./scripts/publish.js",
     "test": "node src/bin/asow-package -f"
