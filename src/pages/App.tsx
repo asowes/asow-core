@@ -3,7 +3,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { combineReducers } from "@reduxjs/toolkit";
 
-import { reducers, store } from "@asow/core/redux";
+import { reducers, store } from "../redux";
 
 const theme = {
   breakpoints: {

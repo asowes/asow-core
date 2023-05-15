@@ -13,7 +13,7 @@ const instance = axios.create({
 // 添加请求拦截器
 instance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem("token");
+    const token = JSON.parse(localStorage.getItem("token")) || "";
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -41,6 +41,6 @@ export function axiosRequest<D = any>(
   config?: AxiosRequestConfig<D>
 ) {
   const _method = method || "get";
-  const _config = { ...config, _method };
-  return instance(url, _config);
+
+  return instance(url, { method: _method, ...config });
 }
