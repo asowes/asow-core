@@ -42,5 +42,9 @@ export function axiosRequest<D = any>(
 ) {
   const _method = method || "get";
 
-  return instance(url, { method: _method, ...config });
+  const _config = data
+    ? { method: _method, data, ...config }
+    : { method: _method, ...config };
+
+  return instance(url, _config);
 }
