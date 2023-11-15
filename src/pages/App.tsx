@@ -2,7 +2,6 @@ import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { combineReducers } from "@reduxjs/toolkit";
-import "../sys";
 
 import { reducers, store } from "../redux";
 
