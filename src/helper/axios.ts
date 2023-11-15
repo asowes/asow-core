@@ -13,8 +13,8 @@ const instance = axios.create({
 // 添加请求拦截器
 instance.interceptors.request.use(
   (config) => {
-    const token = JSON.parse(localStorage.getItem("token")) || "";
-    if (token) {
+    if (!config.headers.Authorization) {
+      const token = JSON.parse(localStorage.getItem("token")) || "";
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
