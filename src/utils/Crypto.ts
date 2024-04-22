@@ -1,9 +1,9 @@
 import CryptoJS from "crypto-js";
 
-const key = "Asow_F*(^@!:DNJKOS65464R@!F";
+const DEFAULT_KEY = "Asow_F*(^@!:DNJKOS65464R@!F";
 
 const generateKeyFromPassphrase = (passphrase?: string): string => {
-  return CryptoJS.SHA256(passphrase || key)
+  return CryptoJS.SHA256(passphrase || DEFAULT_KEY)
     .toString(CryptoJS.enc.Hex)
     .substring(0, 32);
 };
@@ -21,4 +21,9 @@ const decryptMessage = (
   );
 };
 
-export { generateKeyFromPassphrase, encryptMessage, decryptMessage };
+export {
+  DEFAULT_KEY,
+  generateKeyFromPassphrase,
+  encryptMessage,
+  decryptMessage,
+};
